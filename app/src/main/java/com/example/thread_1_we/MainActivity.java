@@ -51,12 +51,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 workerThread.addTaskToMessageQueue(taskone);
+                workerThread.start();
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 workerThread.addTaskToMessageQueue(taskTwo);
+                workerThread.start();
             }
         });
     }
@@ -84,8 +86,5 @@ public class MainActivity extends AppCompatActivity {
 
      WE CANNOT ONE THREAD MORE THAN ONCE, AND WHEN A THREAD COME OUT FROM RUN METHOD IT WILL
      DIE AUTOMATICALLY
-
-
-
 
  */
